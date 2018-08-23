@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="menu">
+		<h5>Pour lancer la communication, faites passer l'URL à votre destinataire</h5>
+		<!--<p>
+			<button class="btn btn-success">Lancer le stream</button>
+			<button class="btn btn-danger">couper le stream</button>
+		</p> -->
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
+			<video id="localVideo" autoplay muted></video>
+			<div class="bandeau" id="bdemitt">
+				<p>Emission</p>
+			</div>
+		</div>
+  
+		<div class="col-sm-12 col-md-6">
+			<video controls id="remoteVideo" autoplay></video>
+			<div class="bandeau" id="bdreceive">
+				<p>Reception</p>
+			</div>
+		</div>
+	</div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
