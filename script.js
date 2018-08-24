@@ -96,6 +96,8 @@ function startWebRTC(isOfferer) {
     }
   };
 
+document.querySelector('#start').addEventListener('click', function(){
+	
   // On récupère le flux audio et vidéo local
   navigator.mediaDevices.getUserMedia({
     audio: true,
@@ -106,6 +108,8 @@ function startWebRTC(isOfferer) {
     // On ajoute le flux local a envoyer aux autres peers
     stream.getTracks().forEach(track => pc.addTrack(track, stream));
   }, onError);
+  
+})
 
   // On écoute les données de signalement de Scaledrone
   room.on('data', (message, client) => {
