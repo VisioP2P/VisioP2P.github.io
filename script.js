@@ -1,15 +1,15 @@
 // on genere une room aleatoire si besoin
-//if (!location.hash) {
-// location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
-//}
-//const roomHash = location.hash.substring(1);
+if (!location.hash) {
+ location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+}
+const roomHash = location.hash.substring(1);
 
 //API ID
 const drone = new ScaleDrone('yiS12Ts5RdNhebyM');
 
 // Le nom de la room doit être prefixé par 'observable' ce qui permet
 // de garder la trace des users connectés et lier les messages
-const roomName = 'observable-' + 'test';
+const roomName = 'observable-' + roomHash;
 
 // Configuration de l'instance de RTCPeerConnection
 // on utilise le serveur STUN public de Google
